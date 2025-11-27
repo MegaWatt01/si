@@ -62,6 +62,7 @@
       <!-- Control buttons -->
       <div class="flex flex-row gap-xs items-center">
         <div
+          data-testid="hide-minimap"
           v-tooltip="showMinimap ? 'Hide Minimap' : 'Show Minimap'"
           :class="getButtonClasses(false)"
           @click="toggleMinimap"
@@ -70,6 +71,7 @@
         </div>
         <div
           v-tooltip="'Zoom Out'"
+          data-testid="map-zoom-out"
           :class="getButtonClasses(zoomLevel >= MAX_ZOOM)"
           @click="zoomOut"
         >
@@ -77,6 +79,7 @@
         </div>
         <div
           v-tooltip="'Current Zoom'"
+          data-testid="map-zoom-display"
           :class="
             clsx(
               'border p-2xs rounded select-none',
@@ -91,6 +94,7 @@
         </div>
         <div
           v-tooltip="'Zoom In'"
+          data-testid="map-zoom-in"
           :class="getButtonClasses(zoomLevel >= MAX_ZOOM)"
           @click="zoomIn"
         >
@@ -98,6 +102,7 @@
         </div>
         <div
           v-tooltip="'Reset'"
+          data-testid="map-zoom-reset"
           :class="getButtonClasses(false)"
           @click="reset"
         >
@@ -105,6 +110,7 @@
         </div>
         <div
           v-tooltip="'Help'"
+          data-testid="map-help"
           :class="getButtonClasses(false)"
           @click="emit('help')"
         >

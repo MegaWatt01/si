@@ -996,11 +996,27 @@ const gridMode = ref<GridMode>({ mode: "default", label: "" });
 
 const groupByDropDownOptions = computed(() => {
   const baseOptions = [
-    { value: "diff", label: "Diff Status" },
-    { value: "qualification", label: "Qualification Status" },
-    { value: "upgrade", label: "Upgradeable" },
-    { value: "schemaName", label: "Schema Name" },
-    { value: "resource", label: "Resource" },
+    { value: "diff", label: "Diff Status", dataTestId: "group-by-option-diff" },
+    {
+      value: "qualification",
+      label: "Qualification Status",
+      dataTestId: "group-by-option-qualification",
+    },
+    {
+      value: "upgrade",
+      label: "Upgradeable",
+      dataTestId: "group-by-option-upgrade",
+    },
+    {
+      value: "schemaName",
+      label: "Schema Name",
+      dataTestId: "group-by-option-schema-name",
+    },
+    {
+      value: "resource",
+      label: "Resource",
+      dataTestId: "group-by-option-resource",
+    },
   ];
 
   // Only show Socket Connections option if there are components with socket connections

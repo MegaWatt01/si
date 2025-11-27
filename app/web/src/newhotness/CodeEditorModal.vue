@@ -9,6 +9,7 @@
     <template #titleIcons>
       <button
         v-tooltip="'Cancel'"
+        data-testid="modal-close-button"
         :class="
           clsx(
             'modal-close-button',
